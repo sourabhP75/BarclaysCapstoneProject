@@ -1,0 +1,16 @@
+server:
+  port: 9000
+#jdbc related properties
+#jdbc url
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/account_management_tracker
+    username: root
+    password: Ritul@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#username
+#password 
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true  
