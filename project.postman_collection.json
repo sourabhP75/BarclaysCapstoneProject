@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "1f43c557-d78d-41f5-a033-63926f7d38bd",
+		"name": "project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9000/createuser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\r\n    \"customerId\": 111110,\r\n    \"password\": \"84354#%#$%\"\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/createuser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"createuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/getuser/0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/getuser/111111",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"getuser",
+						"111111"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/createaccount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountNumber\" : 1234567895,\r\n    \"currentBalance\": 833033,\r\n    \"customerId\": 111116\r\n  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/createaccount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"createaccount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/customers/12234567",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/getaccount/1234567890",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"getaccount",
+						"1234567890"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/adduserdetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\": 111113,\r\n    \"aadharNumber\": \"131434562323\",\r\n    \"address\": \"pune\",\r\n    \"dob\": \"1999-06-25\",\r\n    \"emailAddress\": \"wegv4@gmail.com\",\r\n    \"name\": \"karan\",\r\n    \"panNumber\": \"PPPW3322235\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/adduserdetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"adduserdetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/customers/12345678901",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/getcustdetails/111111",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"getcustdetails",
+						"111111"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/customers/12345678901",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/getdetailsbypan/PPPW3345235",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"getdetailsbypan",
+						"PPPW3345235"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/customers/addTransaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountNumber\" : 1234567894,\r\n    \"amount\":240,\r\n    \"transactionId\" : \"rthdfbvr78765\",\r\n    \"type\":\"credit\",\r\n    \"subType\" : \"cash\",\r\n    \"transactionRefNo\" : \"34588755876\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/transaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/customers/34568",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/topfiveTransaction/1234567894",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"topfiveTransaction",
+						"1234567894"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
