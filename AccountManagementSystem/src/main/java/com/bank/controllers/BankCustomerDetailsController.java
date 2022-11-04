@@ -1,12 +1,8 @@
 package com.bank.controllers;
 
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-//import org.springframework.mail.SimpleMailMessage;
-//import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,8 +21,6 @@ import com.bank.services.UsersService;
 
 @RestController
 public class BankCustomerDetailsController {
-	//@Autowired
-    //private JavaMailSender javaMailSender;
 	
 	@Autowired
 	private BankCustomerDetailsService bankCustomerDetailsService;
@@ -96,8 +90,6 @@ public class BankCustomerDetailsController {
 			
 				Users newUser = createNewLoginCredentials(bankCustomerDetails);
 				
-//				sendEmail(newUser,customerDetails);
-				
 				return ResponseHandler.generatResponseForAccountCreation("Success", HttpStatus.CREATED, bankCustomerDetails,
 						createbankAccount(bankCustomerDetails));
 				
@@ -109,15 +101,10 @@ public class BankCustomerDetailsController {
 		else 
 			//if user already exists -> create new account and add that account number to existing customerId
 		{
-			
-
 			return ResponseHandler.generatResponseForAccountCreation("User added to existing customer Id", HttpStatus.CREATED, bankCustomerDetailsfromDB,createbankAccount(bankCustomerDetailsfromDB));
 		}
-		
-		
+
 	}
-	
-	// update
 	
 	
 	//Delete 
@@ -149,24 +136,8 @@ public class BankCustomerDetailsController {
 		Users newUser = new Users();
 		newUser.customerId=bankCustomerDetails.getCustomerId();
 		newUser.password="aj12P2&^ioa";
-		//newUser.roleId=2;
 		usersService.createUser(newUser);
 		return newUser;
 	}
-//	public void sendEmail(Users user,BankCustomerDetails bankCustomerDetails) {
-//		
-//	        SimpleMailMessage msg = new SimpleMailMessage();
-//	        msg.setTo(bankCustomerDetails.getEmailAddress());
-//
-//	        msg.setSubject("----<Important>----- Login Credentials for Internet Banking");
-//	        msg.setText("Dear" +bankCustomerDetails.getName()+",\nPlease find below your CustomerId and first time login Password for Internet Banking.\nYou will be forced to "
-//	        		+ "change your system generated password for first time login.\n"+ 
-//	        		" CustomerID: "+ user.getCustomerId() + " \nSystem generated Password:"+ user.getPassword()+ "\n \n"
-//	        				+ "Yours Truthful,\n Bank of Group A1 ");
-//
-//	        javaMailSender.send(msg);
-//
-//	}
-	
 }
 
